@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Extra.MainActivity">
+<androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+    android:id="@+id/am_swipe"
+    android:layout_above="@id/am_progress"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:background="@color/colorPrimary"
+            android:layout_height="56dp">
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent">
+                <TextView
+                    android:id="@+id/am_email"
+                    android:padding="5dp"
+                    android:maxLines="1"
+                    android:ellipsize="end"
+                    android:textSize="18dp"
+                    android:text="myDrive : Email"
+                    android:textColor="#fff"
+                    android:gravity="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+            </LinearLayout>
+            <ImageView
+                android:id="@+id/am_sync_all"
+                android:paddingHorizontal="15dp"
+                android:src="@drawable/ic_sync"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent" />
+        </LinearLayout>
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/am_recycler"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+        </androidx.recyclerview.widget.RecyclerView>
+    </LinearLayout>
+</androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+    <ProgressBar
+        android:id="@+id/am_progress"
+        style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/am_scroll"
+        android:background="#FFFFFF"
+        android:indeterminateOnly="true"
+        android:progressBackgroundTint="#F1F4F1"
+        android:visibility="visible">
+    </ProgressBar>
+    <ScrollView
+        android:layout_alignParentBottom="true"
+        android:id="@+id/am_scroll"
+        android:layout_width="match_parent"
+        android:layout_height="70dp">
+
+        <TextView
+            android:id="@+id/am_result"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center|top"
+            android:padding="5dp"
+            android:text="Results\n"
+            android:textAlignment="center"
+            android:textColor="#070707" />
+    </ScrollView>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/am_fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:src="@drawable/ic_add"
+        app:backgroundTint="#E91E63"
+        app:elevation="6dp" />
+
+</RelativeLayout>

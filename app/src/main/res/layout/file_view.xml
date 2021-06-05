@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:elevation="1dp"
+    android:background="#fff"
+    android:layout_margin="1dp"
+    android:paddingHorizontal="5dp"
+    android:paddingVertical="10dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <LinearLayout
+        android:id="@+id/fv_layout"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:id="@+id/fv_image"
+            android:src="@drawable/ic_folder"
+            android:layout_width="50dp"
+            android:layout_height="50dp" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_height="match_parent">
+            <TextView
+                android:id="@+id/fv_name"
+                android:ellipsize="middle"
+                android:padding="2dp"
+                android:layout_marginLeft="10dp"
+                android:textSize="18dp"
+                android:text="FileName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:singleLine="true" />
+            <TextView
+                android:id="@+id/fv_details"
+                android:maxLines="1"
+                android:ellipsize="end"
+                android:text="Details"
+                android:layout_marginLeft="30dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+    </LinearLayout>
+    <TextView
+        android:id="@+id/fv_more"
+        android:paddingHorizontal="10dp"
+        android:drawableRight="@drawable/ic_more"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent" />
+</LinearLayout>
