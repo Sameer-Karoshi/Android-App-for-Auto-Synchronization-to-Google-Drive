@@ -15,3 +15,7 @@ Using this website we can enable an API for Google drive. To enable this API we 
 4) Schedule repeating method: https://developer.android.com/training/scheduling/alarms Reffering this documentation we made a schedule for uploding data to drive.
 5) Background Processing: https://developer.android.com/guide/background
 6) I enabled all required permission in manifest of Android studio.
+
+## Demo Video
+
+![alt text](https://github.com/Sameer-Karoshi/Android-App-for-Auto-Synchronization-to-Google-Drive/blob/master/mydrive.gif)
